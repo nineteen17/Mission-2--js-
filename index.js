@@ -81,7 +81,7 @@ rightArrow.addEventListener('click', () => {
 
 
 
-
+// add a math operator
 
 
 
