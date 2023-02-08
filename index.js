@@ -93,34 +93,3 @@ rightArrow.addEventListener('click', () => {
 
 
 
-
-
-
-
-
-// // Get the modal
-// let modal = document.getElementById("myModal");
-
-// // Get the image and insert it inside the modal - use its "alt" text as a caption
-// let img = document.getElementsByClassName(".photo");
-// let modalImg = document.getElementById("img01");
-// let captionText = document.getElementById("caption");
-// img.onclick = function(){
-//   modal.style.display = "block";
-//   modalImg.src = this.src;
-//   captionText.innerHTML = this.alt;
-// }
-
-// // Get the <span> element that closes the modal
-// let span = document.getElementsByClassName("close")[0];
-
-// // When the user clicks on <span> (x), close the modal
-// span.onclick = function() {
-//   modal.style.display = "none"};
-
-//    const imgThumbnail = document.querySelectorAll('.photo');
-
-//    for ( let i = 1; i <= imgThumbnail.length; i++ ) {
-//    let imgId = document.querySelector('#bgImage'+ i + '');
-//    let imgSrc = imgId.src = './img/bg' + i + '.jpg';
-//  }
