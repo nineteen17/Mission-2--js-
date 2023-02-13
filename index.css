@@ -29,7 +29,7 @@ h1 {
   border: black 50px;
   margin: 50px black;
   background-color: whitesmoke;
-  height: 130px
+  height: 130px;
 }
 /* LOGO */
 .logo {
@@ -83,7 +83,7 @@ h1 {
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
   animation-timing-function: linear;
-  
+
   /*animation: animate1 3.5s infinite;  */
 }
 /* The box that contains the text for the HOME and ABOUT */
@@ -263,10 +263,11 @@ footer {
   margin: 10px;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 1) 0px 20px 20px -7px;
-  transform: translateX(400%);
+  transform: translateX(400%); /* translate an element along the x-axis */
   transition: transform 1s ease;
 }
 
+/* represents every even elements that has the same expanded element name */
 .box:nth-of-type(even) {
   transform: translate(-400%);
 }
@@ -286,23 +287,21 @@ footer {
 }
 
 /* Scroll animation 2 */
-.gallery{
-transform: translateX(400%);
-transition: transform 1s ease;
+.gallery {
+  transform: translateX(400%);
+  transition: transform 1s ease;
 }
 
 .gallery:nth-of-type(even) {
-transform: translate(-400%);
+  transform: translate(-400%);
 }
 
 .gallery.show {
-display: flex;
-justify-content: center;
-transform: translate(0);
-text-align: center;
+  display: flex;
+  justify-content: center;
+  transform: translate(0);
+  text-align: center;
 }
-
-
 
 /* POPUP MODAL */
 
@@ -416,6 +415,11 @@ text-align: center;
   width: 80%;
   height: 80%;
   object-fit: contain;
+}
+
+/* Blur Behind Popup */
+.blur {
+  filter: blur(0px);
 }
 
 /* SPACE BACKGROUND */
