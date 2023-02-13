@@ -1,6 +1,6 @@
 // SCROLL Animation 
 const boxes = document.querySelectorAll('.box')
-// const boxes2 = document.querySelectorAll('.gallery')
+
 document.addEventListener('scroll', checkBoxes)
 
 
