@@ -5,7 +5,7 @@ const boxes = document.querySelectorAll(".box");
 document.addEventListener("scroll", boxesTransition);
 //Function to trigger the Transition
 function boxesTransition() {
-  // how much of the inner height is shown before it triggers
+  // equals how much of the inner height is shown before it triggers
   const triggerBottom = window.innerHeight / 2; // Half of the screen
   //loop the class of box
   boxes.forEach((box) => {
@@ -17,7 +17,8 @@ function boxesTransition() {
     }
   });
 }
-//So Basically if the top of the box is past the center of the screen it should  pop up
+//So Basically if the top of the box class is past the center of the screen it should trigger the transition
+
 
 // POPUP MODAL
 
@@ -54,20 +55,20 @@ const updateImage = (i) => {
   index = i;
 };
 
-//for each allows every photo to trigger the click event listener 
+//for each allows every photo to trigger the click event listener
 //all .photo class elements can now be clicked on. updateImage function also reads the index of .photo
 images.forEach((shoe, index) => {
   shoe.addEventListener("click", () => {
-    updateImage(index);   // each image and image name is now linked to the .photo class thanks to the index
-    popup.classList.toggle("active");   //popup div activates
-    blurMe();      // blur activates
+    updateImage(index); // each image and image name is now linked to the .photo class thanks to the index
+    popup.classList.toggle("active"); //popup div activates
+    blurMe(); // blur activates
   });
 });
 
 //Close POPUP
 closeBtn.addEventListener("click", () => {
-  popup.classList.toggle("active");  //popup div deactivates
-  removeBlurMe();     // blur deactivates
+  popup.classList.toggle("active"); //popup div deactivates
+  removeBlurMe(); // blur deactivates
 });
 
 //Both Arrow buttons call updateImage()
@@ -127,39 +128,26 @@ function removeBlurMe() {
     console.log(blurBackSwitch);
   }
 }
- removeBlurMe()
+removeBlurMe();
 
+//Sub Button popup
 
+let subBtn = document.getElementById("sub-btn");
+let closeSubBtn = document.querySelector(".close-btn-sub");
+let popUpSub = document.querySelector(".popupSub");
 
- //Sub Button popup
+//Make it popup
+subBtn.addEventListener("click", popUpSubFunc);
 
- let subBtn = document.getElementById("sub-btn")
- let closeSubBtn = document.querySelector(".close-btn-sub") 
- let popUpSub = document.querySelector(".popupSub")
-
-
- //Make it popup
- subBtn.addEventListener("click", popUpSubFunc)
-
- function popUpSubFunc() {
+function popUpSubFunc() {
   popUpSub.classList.toggle("active");
-  blurMe()
- }
+  blurMe();
+}
 
- //Close Popup
- closeSubBtn.addEventListener("click", closePopUpSubFunc)
+//Close Popup
+closeSubBtn.addEventListener("click", closePopUpSubFunc);
 
- function closePopUpSubFunc() {
+function closePopUpSubFunc() {
   popUpSub.classList.toggle("active");
-  removeBlurMe()
- }
-
-
-
-
-
-
-
-
-
-
+  removeBlurMe();
+}
