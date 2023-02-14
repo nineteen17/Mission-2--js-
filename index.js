@@ -1,4 +1,4 @@
-// SCROLL Animation
+// SCROLL Transition
 
 const boxes = document.querySelectorAll(".box");
 //Scroll event
@@ -93,7 +93,7 @@ rightArrow.addEventListener("click", () => {
   }
 });
 
-// SCROLL Animation  2
+// SCROLL Transition  2
 
 const boxes2 = document.querySelectorAll(".gallery");
 document.addEventListener("scroll", checkBoxes2);

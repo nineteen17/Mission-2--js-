@@ -231,7 +231,7 @@ footer {
   }
 }
 
-/*Scroll Animation */
+/*Scroll Transition */
 
 .box {
   background-color: white;
@@ -268,7 +268,7 @@ footer {
   justify-content: center;
 }
 
-/* Scroll animation 2 */
+/* Scroll transition 2 */
 .gallery {
   transform: translateX(400%);
   transition: transform 1s ease;
