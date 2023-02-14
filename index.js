@@ -54,19 +54,20 @@ const updateImage = (i) => {
   index = i;
 };
 
-//for each loop allows me to trigger a dynamic event listener on each image
-images.forEach((item, i) => {
-  item.addEventListener("click", () => {
-    updateImage(i);
-    popup.classList.toggle("active");
-    blurMe();
+//for each allows every photo to trigger the click event listener 
+//all .photo class elements can now be clicked on. updateImage function also reads the index of .photo
+images.forEach((shoe, index) => {
+  shoe.addEventListener("click", () => {
+    updateImage(index);   // each image and image name is now linked to the .photo class thanks to the index
+    popup.classList.toggle("active");   //popup div activates
+    blurMe();      // blur activates
   });
 });
 
 //Close POPUP
 closeBtn.addEventListener("click", () => {
-  popup.classList.toggle("active");
-  removeBlurMe();
+  popup.classList.toggle("active");  //popup div deactivates
+  removeBlurMe();     // blur deactivates
 });
 
 //Both Arrow buttons call updateImage()
@@ -114,16 +115,51 @@ function checkBoxes2() {
 let blurBack = document.querySelectorAll(".blur");
 
 function blurMe() {
-  for (var i = 0; i < blurBack.length; i++) {
+  for (let i = 0; i < blurBack.length; i++) {
     let blurBackSwitch = (blurBack[i].style.filter = "blur(20px)");
     console.log(blurBackSwitch);
   }
 }
 
 function removeBlurMe() {
-  for (var i = 0; i < blurBack.length; i++) {
+  for (let i = 0; i < blurBack.length; i++) {
     let blurBackSwitch = (blurBack[i].style.filter = "blur(0px)");
     console.log(blurBackSwitch);
   }
 }
  removeBlurMe()
+
+
+
+ //Sub Button popup
+
+ let subBtn = document.getElementById("sub-btn")
+ let closeSubBtn = document.querySelector(".close-btn-sub") 
+ let popUpSub = document.querySelector(".popupSub")
+
+
+ //Make it popup
+ subBtn.addEventListener("click", popUpSubFunc)
+
+ function popUpSubFunc() {
+  popUpSub.classList.toggle("active");
+  blurMe()
+ }
+
+ //Close Popup
+ closeSubBtn.addEventListener("click", closePopUpSubFunc)
+
+ function closePopUpSubFunc() {
+  popUpSub.classList.toggle("active");
+  removeBlurMe()
+ }
+
+
+
+
+
+
+
+
+
+
